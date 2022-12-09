@@ -1,0 +1,383 @@
+body{
+    color: white
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #424242;
+
+    margin-bottom: 35px;
+    margin-top: 0;
+}
+
+h1{
+    font-size: 45px;
+}
+
+h2{
+    font-size: 32px;
+}
+h3{
+    font-size: 21px;
+}
+
+a{
+    transition: all 0.3s ease-in-out;
+}
+
+p{
+    font-size: 16px;
+    font-style: italic;
+    color: #bfd1fe;
+}
+
+.header{
+    background-image: url(/static/img/townFon2.jpg);
+    height: 100vh;
+    position: relative;
+    min-height: 659px;
+}
+
+.bg-img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.intro-box{
+    height: 100vh;
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+
+.intro{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.header h1{
+    font-size: 130px;
+    margin: 0;
+}
+.header h1, .header p{
+    color: #fff;
+    letter-spacing: 2px;
+}
+.header p{
+    font-size: 50px;
+    padding-top: 0;
+    padding-bottom: 40px;
+    color: #ffffff;
+}
+
+.photoProfile{
+    object-fit: cover;
+}
+
+.about{
+    background-color:#5e718f;
+}
+
+.about img{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    display: block;
+}
+
+.section{
+    text-align: center;
+}
+
+.section{
+    padding-top: 50px;
+}
+
+.title{
+    position: center;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+.title:after{
+    content: '';
+    height: 5px;
+    width: 40px;
+    background-color: #f66;
+    position: absolute;
+    top: 60px;
+    left: calc(50% - 20px);
+}
+
+.vira-card{
+    text-align: center;
+}
+.vira-card .vira-card-header{
+    margin-bottom: 5px;
+}
+
+.vira-card .vira-card-header .card-icon img{
+    color: #fff;
+    font-size: 45px;
+    position: relative;
+    z-index: 1;
+    height:200px;
+    width:270px;
+}
+
+.vira-card .vira-card-content h3 a{
+    position: relative;
+    margin-bottom: 40px;
+    color: #006;
+}
+.vira-card .vira-card-content h3 a:after{
+    content: '';
+    height: 2px;
+    width: 44px;
+    background-color: #f66;
+    position: absolute;
+    top: 50px;
+    left: calc(50% - 22px);
+}
+.vira-card .vira-card-content p{
+    font-size: 15px;
+    padding-top: 20px;
+    font-size: 16px;
+    font-style: italic;
+    color: #bfd1fe;
+    padding-bottom: 40px;
+}
+
+.footer{
+    background-color: #333;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.footer p{
+    font-size: 21px;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.footer img{
+    padding-bottom: 20px;
+    height: 75px;
+    weight: 70px;
+    object-fit: cover;
+}
+
+nav{
+    background-color: #4c5c7b;
+}
+
+.btn-color{
+    background-color: #bfd1fe;
+}
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-login100 {
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+}
+
+
+.wrap-login100 {
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    flex-direction: row-reverse;
+
+}
+
+.login100-more {
+    width: calc(100% - 560px);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+
+.login100-more::before {
+    content: "";
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.1);
+}
+
+.login100-form {
+    width: 560px;
+    min-height: 100vh;
+    display: block;
+    background-color: #8c9cb5;
+    padding: 55px 55px 30px 55px;
+}
+
+.login100-form-title {
+    width: 100%;
+    display: block;
+    font-family: Poppins-Regular;
+    font-size: 30px;
+    color: #333333;
+    line-height: 0.5;
+    text-align: center;
+}
+
+.wrap-input100 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    width: 100%;
+    height: 60px;
+    position: relative;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.input100 {
+    display: block;
+    width: 100%;
+    background: transparent;
+    font-family: Montserrat-Regular;
+    font-size: 18px;
+    color: #555555;
+    line-height: 1.2;
+    padding: 0 26px;
+}
+
+input.input100 {
+    height: 100%;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.focus-input100 {
+    position: absolute;
+    display: block;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    top: -1px;
+    left: -1px;
+    pointer-events: none;
+    border: 1px solid #6675df;
+    border-radius: 10px;
+
+    visibility: hidden;
+    opacity: 0;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+
+    -webkit-transform: scaleX(1.1) scaleY(1.3);
+    -moz-transform: scaleX(1.1) scaleY(1.3);
+    -ms-transform: scaleX(1.1) scaleY(1.3);
+    -o-transform: scaleX(1.1) scaleY(1.3);
+    transform: scaleX(1.1) scaleY(1.3);
+}
+
+.p-b-43 {padding-bottom: 30px;}
+
+.container-login100-form-btn {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.login100-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border-color: #bfd1fe;
+    background: #bfd1fe;
+
+    font-family: Montserrat-Bold;
+    font-size: 12px;
+    color: #333333;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.login100-form-btn:hover {
+    background: #6675df;
+}
+
+
+.pt_pb{
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+.txt2 a{
+    font-family: Montserrat-Regular;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #424242;
+}
+
+.imgProfile{
+    weight: 460px;
+    height: 410px;
+    text-align: center;
+    margin-bottom: 20px;
+}
