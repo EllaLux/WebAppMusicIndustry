@@ -65,8 +65,8 @@
             </div>
         </div>
     </#if>
-    <table class="table mt-3">
-        <thead class="thead-light">
+    <table class="table table-secondary mt-3">
+        <thead class="thead-dark">
         <tr align="center">
             <th width="20%" scope="col"> Company name</th>
             <th width="20%" scope="col"> Date of foundation</th>

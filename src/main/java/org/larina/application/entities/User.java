@@ -25,7 +25,7 @@ public class User implements UserDetails {
     @Length(max=250, message = "Password is so long!")
     private String password;
     //для автоматической валидации паролей
-    //@Transient делает поле несохраняемы в бд
+    //@Transient делает поле не сохраняемыми в бд
     private boolean active;
     @NotBlank(message = "Please, fill the fullname!")
     @Length(max=250, message = "Fullname is so long!")

@@ -1,4 +1,5 @@
 <#import "parts/common.ftlh" as c>
+<#import "parts/security.ftlh" as s>
 
 <@c.page>
     <div class="form-row">
@@ -10,8 +11,8 @@
             </form>
         </div>
     </div>
-    <table class="table mt-3">
-        <thead class="thead-light">
+    <table class="table table-secondary mt-3">
+        <thead class="thead-dark">
         <tr align="center">
             <th width="20%" scope="col"> Nickname</th>
             <th width="20%" scope="col"> Full name</th>
@@ -20,7 +21,9 @@
             <th width="20%" scope="col"> Debut date</th>
             <th width="20%" scope="col"> Salary</th>
             <th width="20%" scope="col"> PositionGroup</th>
-            <th width="20%" scope="col"> Delete</th>
+            <#if s.isAdmin>
+                <th width="20%" scope="col"> Delete</th>
+            </#if>
         </tr>
         </thead>
         <#list userAndArtistList as userAndArtist>
@@ -37,12 +40,14 @@
                     <#else> -
                     </#if>
                 </span></td>
-            <td><span>
+            <#if s.isAdmin>
+                <td><span>
                     <form method="get" action="/user/userDelete" class="form-inline">
                         <input type="hidden" name="userId" value="${userAndArtist.user.getId()}">
                          <button type="submit" class="btn btn-primary ml-2">Delete</button>
                     </form>
                 </span></td>
+            </#if>
             </tbody>
         <#else>
             Artists are missing!

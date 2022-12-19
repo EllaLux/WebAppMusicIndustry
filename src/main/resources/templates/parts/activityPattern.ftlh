@@ -1,3 +1,4 @@
+<#import "security.ftlh" as s>
 <#macro activityPattern path activityParameter parameter str activityWhatList>
     <div class="form-row">
         <div class="form-group col-md-6">
@@ -11,55 +12,58 @@
             </form>
         </div>
     </div>
-    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-       aria-controls="collapseExample">
-        Add new ${parameter}
-    </a>
-    <div class="collapse" id="collapseExample">
-        <div class="form-group mt-3">
-            <form method="post" enctype="multipart/form-data">
-                <div class="form-group">
-                    <input type="text" name="title" class="form-control"
-                           placeholder="Введите название события">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="dateEvent" class="form-control"
-                           placeholder="Введите дату проведения события">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="expenses" class="form-control"
-                           placeholder="Затраты на мероприятие">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="income" class="form-control"
-                           placeholder="Доход с мероприятия">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="nickname" class="form-control"
-                           placeholder="Никнейм артиста">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="site" class="form-control"
-                           placeholder="Ссылка">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="${activityParameter}" class="form-control"
-                           placeholder="${str}">
-                </div>
-                <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary ml-2">Add</button>
-                </div>
-            </form>
+    <#if s.isAdmin>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+           aria-controls="collapseExample">
+            Add new ${parameter}
+        </a>
+        <div class="collapse" id="collapseExample">
+            <div class="form-group mt-3">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input type="text" name="title" class="form-control"
+                               placeholder="Введите название события">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="dateEvent" class="form-control"
+                               placeholder="Введите дату проведения события">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="expenses" class="form-control"
+                               placeholder="Затраты на мероприятие">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="income" class="form-control"
+                               placeholder="Доход с мероприятия">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="nickname" class="form-control"
+                               placeholder="Никнейм артиста">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="site" class="form-control"
+                               placeholder="Ссылка">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="${activityParameter}" class="form-control"
+                               placeholder="${str}">
+                    </div>
+                    <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary ml-2">Add</button>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
-    <#if artistNickname??>
-        <h6>${artistNickname}</h6>
-    <#else> Enter nickname
     </#if>
+    <div class="mt-3" style="color: white">
+        <#if artistNickname??>
+            <h6>${artistNickname}</h6>
+        </#if>
+    </div>
     <#if activityWhatList?has_content>
-        <table class="table mt-3">
-            <thead class="thead-light">
+        <table class="table table-secondary mt-3">
+            <thead class="thead-dark">
             <tr align="center">
                 <th width="20%" scope="col"> Activity title</th>
                 <#if parameter == "track">

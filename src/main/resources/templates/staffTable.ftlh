@@ -11,8 +11,8 @@
             </form>
         </div>
     </div>
-    <table class="table mt-3">
-        <thead class="thead-light">
+    <table class="table table-secondary mt-3">
+        <thead class="thead-dark">
         <tr align="center">
             <th width="20%" scope="col"> Full name</th>
             <th width="20%" scope="col"> Username</th>
@@ -24,34 +24,28 @@
         </tr>
         </thead>
         <#list userAndStaffList as userAndStaff>
-            <#if s.isAdmin>
-
-            <#else>
-                <#if userAndStaff.staff.getCompany().getName() == company.getName()>
-                    <tbody align="center">
-                    <td><span> ${userAndStaff.user.getFullname()} </span></td>
-                    <td><span> ${userAndStaff.user.getUsername()} </span></td>
-                    <td><span>
-            <#if userAndStaff.staff??>
-                ${userAndStaff.staff.getPosition()?if_exists}
-            <#else> -
-            </#if>
+            <tbody align="center">
+            <td><span> ${userAndStaff.user.getFullname()} </span></td>
+            <td><span> ${userAndStaff.user.getUsername()} </span></td>
+            <td><span>
+                <#if userAndStaff.staff??>
+                    ${userAndStaff.staff.getPosition()?if_exists}
+                <#else> -
+                </#if>
             </span></td>
-                    <td><span>
+            <td><span>
                     <#list userAndStaff.user.getRoles() as role>
                         ${role}<#sep>,
                     </#list>
                 </span></td>
-                    <#if s.isAdmin>
-                        <td><span>
+            <#if s.isAdmin>
+                <td><span>
                     <form method="get" action="/user/userDelete" class="form-inline">
                         <input type="hidden" name="userId" value="${userAndStaff.user.getId()}">
                          <button type="submit" class="btn btn-primary ml-2">Delete</button>
                     </form>
                 </span></td>
-                        </tbody>
-                    </#if>
-                </#if>
+                </tbody>
             </#if>
         <#else>
             Список пуст
