@@ -45,10 +45,10 @@
                          <button type="submit" class="btn btn-primary ml-2">Delete</button>
                     </form>
                 </span></td>
-                </tbody>
             </#if>
+            </tbody>
         <#else>
-            Список пуст
+            Staff are missing!
         </#list>
     </table>
 </@c.page>

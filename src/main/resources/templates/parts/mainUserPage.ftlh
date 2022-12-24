@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>POP STARS</title>
+    <title>Music Industry</title>
     <!-- ссылка на стиль -->
     <link rel="stylesheet" href="/static/css/style.css">
 

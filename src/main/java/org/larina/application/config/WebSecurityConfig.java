@@ -33,7 +33,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                    .antMatchers("/artistRegistration", "/staffRegistration", "/static/**", "/activate/*")
+                    .antMatchers("/login","/artistRegistration", "/staffRegistration", "/static/**", "/activate/*")
                     .permitAll()
                     //мэпинг для раздачи стилей, чтобы статические ресурсы раздавались без авторизации
                     .anyRequest().authenticated()

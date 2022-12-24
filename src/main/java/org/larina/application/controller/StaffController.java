@@ -27,7 +27,8 @@ public class StaffController {
     private ArtistRepo artistRepo;
 
     @GetMapping("/staff")
-    public String StaffList(@RequestParam(required = false) String fullname, @AuthenticationPrincipal User user, Model model){
+    public String StaffList(@RequestParam(required = false) String fullname,
+                            @AuthenticationPrincipal User user, Model model){
         Iterable<User> userList = userRepo.findAll();
 
         List<UserAndStaff> userAndStaffList = null;

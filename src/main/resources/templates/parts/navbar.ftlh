@@ -21,7 +21,7 @@ navbar-light bg-light - цветовая схема панели navbar navbar-l
             <!-- каждый элемент списка часть меню -->
             <li class="nav-item">
                 <!-- навигационная ссылка -->
-                <a class="nav-link" href="/">POP STARS</a>
+                <a class="nav-link" href="/">MUSIC INDUSTRY</a>
             </li>
             <#if isAdmin>
             <li class="nav-item">

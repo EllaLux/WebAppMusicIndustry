@@ -3,7 +3,7 @@
     <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>POP STARS</title>
+        <title>MUSIC INDUSTRY</title>
         <!-- ссылка на стиль -->
         <link rel="stylesheet" href="/static/css/style.css">
 
